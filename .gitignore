@@ -1,4 +1,4 @@
-# Visual Studio 2015 user specific files
+# Visual Studio user specific files
 .vs/
 
 # Compiled Object files
@@ -6,6 +6,86 @@
 *.lo
 *.o
 *.obj
+
+#Ignore project files in the root
+.sln
+!*.sln
+.vs
+*.suo
+*.opensdf
+*.sdf
+*.pdb
+*-Debug.dll
+*.xcodeproj
+./Makefile
+./CMakeLists.txt
+..ue4dependencies
+
+ipch*
+
+#Derived data cache should never be checked in
+Engine/DerivedDataCache*
+
+#Engine intermediates
+Engine/Intermediate/Build/BuildRules*
+Engine/Plugins*/Intermediate*
+
+#Intermediate folders created for various C# programs
+Engine/Source/Programs*/obj*
+
+#Saved folders for programs should not be checked in
+Engine/Programs*/Saved*
+Engine/Programs/UnrealBuildTool*
+
+#Intermediate folders for programs should not be checked in
+Engine/Programs*/Intermediate*
+
+#Ignore any saved local files
+Engine/Saved*
+
+#Ignore any build receipts
+Engine/Build/Receipts*
+
+#Ignore location files that break sync between Jenkins and P4v
+Engine/Content/Localization/EditorTutorials/ja/EditorTutorials.archive
+Engine/Content/Localization/EditorTutorials/zh-Hans/EditorTutorials.archive
+Engine/Content/Localization/Engine/ko/Engine.archive
+
+#Ignore Unix backup files
+*~
+
+#Ignore Mac desktop services store files
+.DS_Store
+
+#Ignore crash reports
+crashinfo–*
+
+#Ignore linux project files
+*.user
+*.pro
+*.pri
+*.kdev4
+
+#Ignore FMOD files
+FMOD/.cache/*
+FMOD/.unsaved/*
+FMOD/.user/*
+#Temporarily adding all FMOD files to ignore to ensure they are not needed for playing
+FMOD/*
+
+# Ignore project-specific files
+#ProjectDante/Binaries/*.pdb
+#ProjectDante/Binaries/-Shipping.
+Playground/Binaries/*
+Playground/Build/Receipts/*
+Playground/DerivedDataCache/*
+Playground/Intermediate/*
+Playground/Saved/*
+Playground/*.sln
+Playground/Plugins/*/Intermediate/*
+Playground/Plugins/FMODStudio/Binaries/Win64/UnrealEditor.modules
+Playground/*.vscode
+Playground/*.idea
 
 # Precompiled Headers
 *.gch
@@ -35,12 +115,12 @@
 *.xcodeproj
 *.xcworkspace
 *.sln
+*.vsconfig
 *.suo
 *.opensdf
 *.sdf
 *.VC.db
 *.VC.opendb
-.vsconfig
 
 # Precompiled Assets
 SourceArt/**/*.png
@@ -48,7 +128,6 @@ SourceArt/**/*.tga
 
 # Binary Files
 Binaries/*
-Plugins/**/Binaries/*
 
 # Builds
 Build/*
@@ -69,7 +148,7 @@ Saved/*
 
 # Compiled source files for the engine to use
 Intermediate/*
-Plugins/**/Intermediate/*
+Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
