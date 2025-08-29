@@ -74,18 +74,18 @@ FMOD/.user/*
 FMOD/*
 
 # Ignore project-specific files
-#ProjectDante/Binaries/*.pdb
-#ProjectDante/Binaries/-Shipping.
-Playground/Binaries/*
-Playground/Build/Receipts/*
-Playground/DerivedDataCache/*
-Playground/Intermediate/*
-Playground/Saved/*
-Playground/*.sln
-Playground/Plugins/*/Intermediate/*
-Playground/Plugins/FMODStudio/Binaries/Win64/UnrealEditor.modules
-Playground/*.vscode
-Playground/*.idea
+#Plaground/Binaries/*.pdb
+#Plaground/Binaries/-Shipping.
+Plaground/Binaries/*
+Plaground/Build/Receipts/*
+Plaground/DerivedDataCache/*
+Plaground/Intermediate/*
+Plaground/Saved/*
+Plaground/*.sln
+Plaground/Plugins/*/Intermediate/*
+Plaground/Plugins/FMODStudio/Binaries/Win64/UnrealEditor.modules
+Plaground/*.vscode
+Plaground/*.idea
 
 # Precompiled Headers
 *.gch
