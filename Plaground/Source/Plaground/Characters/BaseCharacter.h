@@ -6,24 +6,27 @@
 #include "GameFramework/Character.h"
 #include "BaseCharacter.generated.h"
 
+class UAbilitySystemComponent;
+
 UCLASS()
 class PLAGROUND_API ABaseCharacter : public ACharacter
 {
 	GENERATED_BODY()
-
-public:
-	// Sets default values for this character's properties
-	ABaseCharacter();
-
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+private:
+	UPROPERTY(VisibleAnywhere, Category = "GAS", meta = (AllowPrivateAccess = "true"))
+	UAbilitySystemComponent* _ASC;
 
 public:	
+	// Sets default values for this character's properties
+	ABaseCharacter();
+	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 };
