@@ -63,6 +63,18 @@
     <ClInclude Include="..\..\Source\Plaground\Characters\BaseCharacter.h">
       <Filter>Source\Plaground\Characters</Filter>
     </ClInclude>
+    <Filter Include="Source\Plaground\Data">
+      <UniqueIdentifier>{0D1DE99E-03E9-375E-A77B-6F2FF0AAFB10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Plaground\Data\DataTables">
+      <UniqueIdentifier>{04259087-614F-3258-B12A-7354CCE584E8}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Plaground\Data\DataTables\DT_BaseAttributes.cpp">
+      <Filter>Source\Plaground\Data\DataTables</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Plaground\Data\DataTables\DT_BaseAttributes.h">
+      <Filter>Source\Plaground\Data\DataTables</Filter>
+    </ClInclude>
     <Filter Include="Source\Plaground\GAS">
       <UniqueIdentifier>{5975C3C5-2D6F-3381-B4C5-317DFD4A6C96}</UniqueIdentifier>
     </Filter>

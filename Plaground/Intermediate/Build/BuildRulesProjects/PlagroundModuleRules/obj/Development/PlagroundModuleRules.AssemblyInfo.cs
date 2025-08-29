@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlagroundModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fdd496cb2f45b937e77b0fc4dbaafef800f68cd6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36232b16138d5efd0db143b457477e99201c7fe2")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlagroundModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlagroundModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

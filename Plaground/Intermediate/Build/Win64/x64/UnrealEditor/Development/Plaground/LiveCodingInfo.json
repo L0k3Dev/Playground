@@ -2,10 +2,11 @@
 	"RemapUnityFiles": 
 	{
 		"Module.Plaground.gen.cpp.obj": [
-			"BaseCharacter.gen.cpp.obj",
+			"BaseAttributeSet.gen.cpp.obj",
+			"DT_BaseAttributes.gen.cpp.obj",
 			"PlagroundCharacter.gen.cpp.obj",
 			"PlagroundGameMode.gen.cpp.obj",
-			"BaseAttributeSet.gen.cpp.obj",
+			"BaseCharacter.gen.cpp.obj",
 			"Plaground.init.gen.cpp.obj"
 		]
 	}

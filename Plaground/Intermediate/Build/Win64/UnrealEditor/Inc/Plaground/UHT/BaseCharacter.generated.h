@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ABaseCharacter ***********************************************************
 PLAGROUND_API UClass* Z_Construct_UClass_ABaseCharacter_NoRegister();
 
-#define FID_Dev_Playground_Plaground_Source_Plaground_Characters_BaseCharacter_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_Dev_Playground_Plaground_Source_Plaground_Characters_BaseCharacter_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABaseCharacter(); \
 	friend struct Z_Construct_UClass_ABaseCharacter_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ABaseCharacter)
 
 
-#define FID_Dev_Playground_Plaground_Source_Plaground_Characters_BaseCharacter_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_Dev_Playground_Plaground_Source_Plaground_Characters_BaseCharacter_h_14_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ABaseCharacter(ABaseCharacter&&) = delete; \
 	ABaseCharacter(const ABaseCharacter&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~ABaseCharacter();
 
 
-#define FID_Dev_Playground_Plaground_Source_Plaground_Characters_BaseCharacter_h_9_PROLOG
-#define FID_Dev_Playground_Plaground_Source_Plaground_Characters_BaseCharacter_h_12_GENERATED_BODY \
+#define FID_Dev_Playground_Plaground_Source_Plaground_Characters_BaseCharacter_h_11_PROLOG
+#define FID_Dev_Playground_Plaground_Source_Plaground_Characters_BaseCharacter_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Dev_Playground_Plaground_Source_Plaground_Characters_BaseCharacter_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Dev_Playground_Plaground_Source_Plaground_Characters_BaseCharacter_h_12_ENHANCED_CONSTRUCTORS \
+	FID_Dev_Playground_Plaground_Source_Plaground_Characters_BaseCharacter_h_14_INCLASS_NO_PURE_DECLS \
+	FID_Dev_Playground_Plaground_Source_Plaground_Characters_BaseCharacter_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
