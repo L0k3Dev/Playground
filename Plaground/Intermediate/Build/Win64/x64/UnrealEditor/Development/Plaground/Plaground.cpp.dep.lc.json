@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\dev\\playground\\plaground\\source\\plaground\\plaground.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\dev\\playground\\plaground\\intermediate\\build\\win64\\x64\\plagroundeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\dev\\playground\\plaground\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\plaground\\definitions.plaground.h",
+            "c:\\dev\\playground\\plaground\\source\\plaground\\plaground.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

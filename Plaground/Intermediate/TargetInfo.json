@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Plaground",
+			"Path": "..\\Source\\Plaground.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "PlagroundEditor",
+			"Path": "..\\Source\\PlagroundEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

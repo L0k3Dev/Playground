@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\dev\\playground\\plaground\\intermediate\\build\\win64\\unrealeditor\\inc\\plaground\\uht\\plagroundgamemode.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\dev\\playground\\plaground\\intermediate\\build\\win64\\x64\\plagroundeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\dev\\playground\\plaground\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\plaground\\definitions.plaground.h",
+            "c:\\dev\\playground\\plaground\\source\\plaground\\plagroundgamemode.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\dev\\playground\\plaground\\intermediate\\build\\win64\\unrealeditor\\inc\\plaground\\uht\\plagroundgamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

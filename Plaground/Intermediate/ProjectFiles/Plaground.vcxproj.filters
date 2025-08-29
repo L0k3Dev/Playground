@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Plaground.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Plaground.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\PlagroundEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Plaground">
+      <UniqueIdentifier>{A65DAE57-3D94-3666-AF36-1C60C068D059}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Plaground\Plaground.Build.cs">
+      <Filter>Source\Plaground</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Plaground\Plaground.cpp">
+      <Filter>Source\Plaground</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Plaground\Plaground.h">
+      <Filter>Source\Plaground</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Plaground\PlagroundCharacter.cpp">
+      <Filter>Source\Plaground</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Plaground\PlagroundCharacter.h">
+      <Filter>Source\Plaground</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Plaground\PlagroundGameMode.cpp">
+      <Filter>Source\Plaground</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Plaground\PlagroundGameMode.h">
+      <Filter>Source\Plaground</Filter>
+    </ClInclude>
+    <Filter Include="Source\Plaground\Characters">
+      <UniqueIdentifier>{8AE4D8F4-6FBF-3A47-91D2-5A88D73931F4}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Plaground\Characters\BaseCharacter.cpp">
+      <Filter>Source\Plaground\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Plaground\Characters\BaseCharacter.h">
+      <Filter>Source\Plaground\Characters</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
