@@ -5,7 +5,8 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/Dev/Playground/Plaground/Content/Playerground/Blueprints/Characters/BP_Character.uasset"
+				"C:/Dev/Playground/Plaground/Content/Playerground/Blueprints/Characters/BP_Character.uasset",
+				"C:/Dev/Playground/Plaground/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/D/FI/MG0FYBLYFOEIZS3XLI39BJ.uasset"
 			]
 		}
 	]

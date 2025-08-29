@@ -1,15 +1,17 @@
-"C:\Dev\Playground\Plaground\Source\Plaground\PlagroundGameMode.cpp"
-/FI"C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\PlagroundEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"
-/FI"C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\UnrealEditor\Development\Plaground\Definitions.Plaground.h"
-/Yu"C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\PlagroundEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"
-/Fp"C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\PlagroundEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.pch"
-/Fo"C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\UnrealEditor\Development\Plaground\PlagroundGameMode.cpp.obj"
-/sourceDependencies "C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\UnrealEditor\Development\Plaground\PlagroundGameMode.cpp.dep.json"
-@"C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\UnrealEditor\Development\Plaground\Plaground.Shared.rsp"
+"C:/Dev/Playground/Plaground/Source/Plaground/PlagroundGameMode.cpp"
+@"C:/Dev/Playground/Plaground/Intermediate/Build/Win64/x64/UnrealEditor/Development/Plaground/Plaground.Shared.rsp"
+/FI"C:/Dev/Playground/Plaground/Intermediate/Build/Win64/x64/PlagroundEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NoValFmtStr.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h"
+/FI"C:/Dev/Playground/Plaground/Intermediate/Build/Win64/x64/UnrealEditor/Development/Plaground/Definitions.Plaground.h"
+/Yu"C:/Dev/Playground/Plaground/Intermediate/Build/Win64/x64/PlagroundEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NoValFmtStr.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h"
+/Fp"C:/Dev/Playground/Plaground/Intermediate/Build/Win64/x64/PlagroundEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NoValFmtStr.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h.pch"
+/Fo"C:/Dev/Playground/Plaground/Intermediate/Build/Win64/x64/UnrealEditor/Development/Plaground/PlagroundGameMode.cpp.obj"
+/experimental:log "C:/Dev/Playground/Plaground/Intermediate/Build/Win64/x64/UnrealEditor/Development/Plaground/PlagroundGameMode.cpp.sarif"
+/sourceDependencies "C:/Dev/Playground/Plaground/Intermediate/Build/Win64/x64/UnrealEditor/Development/Plaground/PlagroundGameMode.cpp.dep.json"
 /Zc:inline
 /nologo
 /Oi
 /FC
+/diagnostics:caret
 /c
 /Gw
 /Gy
@@ -24,6 +26,7 @@
 /D_WINDLL
 /D_DISABLE_EXTENDED_ALIGNED_STORAGE
 /Ob2
+/d2ExtendedWarningInfo
 /Ox
 /Ot
 /GF
@@ -36,15 +39,14 @@
 /fp:fast
 /Zo
 /Zp8
+/W4
 /we4456
 /we4458
 /we4459
-/we4668
 /wd4244
 /wd4838
 /TP
 /GR-
-/W4
 /std:c++20
 /Zc:preprocessor
 /wd5054

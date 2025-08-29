@@ -7,11 +7,15 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\PlagroundEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\UnrealEditor\Development\Plaground\BaseAttributeSet.gen.cpp.obj"
+"C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\UnrealEditor\Development\Plaground\BaseCharacter.gen.cpp.obj"
 "C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\UnrealEditor\Development\Plaground\Plaground.init.gen.cpp.obj"
 "C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\UnrealEditor\Development\Plaground\PlagroundCharacter.gen.cpp.obj"
 "C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\UnrealEditor\Development\Plaground\PlagroundGameMode.gen.cpp.obj"
 "C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\UnrealEditor\Development\Plaground\Plaground.cpp.obj"
 "C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\UnrealEditor\Development\Plaground\PlagroundCharacter.cpp.obj"
 "C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\UnrealEditor\Development\Plaground\PlagroundGameMode.cpp.obj"
+"C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\UnrealEditor\Development\Plaground\BaseCharacter.cpp.obj"
+"C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\UnrealEditor\Development\Plaground\BaseAttributeSet.cpp.obj"
 "C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\UnrealEditor\Development\Plaground\Default.rc2.res"
 /OUT:"C:\Dev\Playground\Plaground\Intermediate\Build\Win64\x64\UnrealEditor\Development\Plaground\UnrealEditor-Plaground.lib"

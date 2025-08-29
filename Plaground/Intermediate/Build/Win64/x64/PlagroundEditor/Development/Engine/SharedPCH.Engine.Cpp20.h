@@ -1,3 +1,6 @@
-// PCH for Runtime/Engine/Public/EngineSharedPCH.h
-#include "C:/Dev/Playground/Plaground/Intermediate/Build/Win64/x64/PlagroundEditor/Development/Engine/SharedDefinitions.Engine.Cpp20.h"
-#include "Runtime/Engine/Public/EngineSharedPCH.h"
+// PCH for EngineSharedPCH.h
+#include "SharedDefinitions.Engine.Cpp20.h"
+#include "EngineSharedPCH.h"
+#ifdef __ISPC_ALIGN__
+#error ispc.generated.h files are not allowed in precompiled headers (This is a build time optimization to reduce action dependencies)
+#endif

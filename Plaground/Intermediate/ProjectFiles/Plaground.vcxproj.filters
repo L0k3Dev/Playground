@@ -63,5 +63,17 @@
     <ClInclude Include="..\..\Source\Plaground\Characters\BaseCharacter.h">
       <Filter>Source\Plaground\Characters</Filter>
     </ClInclude>
+    <Filter Include="Source\Plaground\GAS">
+      <UniqueIdentifier>{5975C3C5-2D6F-3381-B4C5-317DFD4A6C96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Plaground\GAS\AttributeSets">
+      <UniqueIdentifier>{A17BD509-5FC5-3499-8B04-7C745B48CF6C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Plaground\GAS\AttributeSets\BaseAttributeSet.cpp">
+      <Filter>Source\Plaground\GAS\AttributeSets</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Plaground\GAS\AttributeSets\BaseAttributeSet.h">
+      <Filter>Source\Plaground\GAS\AttributeSets</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
