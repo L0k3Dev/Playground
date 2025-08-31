@@ -78,6 +78,15 @@
     <Filter Include="Source\Plaground\GAS">
       <UniqueIdentifier>{5975C3C5-2D6F-3381-B4C5-317DFD4A6C96}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Plaground\GAS\Abilities">
+      <UniqueIdentifier>{02C000FB-52EB-3C0B-9334-9CBF87A166B9}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Plaground\GAS\Abilities\GA_Base.cpp">
+      <Filter>Source\Plaground\GAS\Abilities</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Plaground\GAS\Abilities\GA_Base.h">
+      <Filter>Source\Plaground\GAS\Abilities</Filter>
+    </ClInclude>
     <Filter Include="Source\Plaground\GAS\AttributeSets">
       <UniqueIdentifier>{A17BD509-5FC5-3499-8B04-7C745B48CF6C}</UniqueIdentifier>
     </Filter>

@@ -4,6 +4,7 @@
 		"Module.Plaground.gen.cpp.obj": [
 			"BaseAttributeSet.gen.cpp.obj",
 			"DT_BaseAttributes.gen.cpp.obj",
+			"GA_Base.gen.cpp.obj",
 			"PlagroundCharacter.gen.cpp.obj",
 			"PlagroundGameMode.gen.cpp.obj",
 			"BaseCharacter.gen.cpp.obj",
