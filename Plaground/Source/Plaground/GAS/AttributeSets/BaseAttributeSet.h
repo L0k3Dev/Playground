@@ -24,6 +24,7 @@ class PLAGROUND_API UBaseAttributeSet : public UAttributeSet
 	
 public:
 #pragma region Base Values
+	
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData Health;
 	ATTRIBUTE_ACCESSORS(UBaseAttributeSet, Health)
