@@ -11,9 +11,11 @@
 .sln
 !*.sln
 .vs
+.vs/
+.vscode/
 *.suo
-*.opensdf
 *.sdf
+*.opensdf
 *.pdb
 *-Debug.dll
 *.xcodeproj
@@ -56,6 +58,7 @@ Engine/Content/Localization/Engine/ko/Engine.archive
 
 #Ignore Mac desktop services store files
 .DS_Store
+Thumbs.db
 
 #Ignore crash reports
 crashinfo–*
@@ -74,18 +77,18 @@ FMOD/.user/*
 FMOD/*
 
 # Ignore project-specific files
-#Plaground/Binaries/*.pdb
-#Plaground/Binaries/-Shipping.
-Plaground/Binaries/*
-Plaground/Build/Receipts/*
-Plaground/DerivedDataCache/*
-Plaground/Intermediate/*
-Plaground/Saved/*
-Plaground/*.sln
-Plaground/Plugins/*/Intermediate/*
-Plaground/Plugins/FMODStudio/Binaries/Win64/UnrealEditor.modules
-Plaground/*.vscode
-Plaground/*.idea
+#**/Binaries/*.pdb
+#**/Binaries/-Shipping.
+**/Binaries/**
+**/Build/Receipts/**
+**/DerivedDataCache/**
+**/Intermediate/**
+**/Saved/**
+**/*.sln
+**/Plugins/*/Intermediate/*
+**/Plugins/FMODStudio/Binaries/Win64/UnrealEditor.modules
+**/*.vscode
+**/*.idea
 
 # Precompiled Headers
 *.gch
