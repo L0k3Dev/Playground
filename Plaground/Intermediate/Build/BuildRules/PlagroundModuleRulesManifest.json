@@ -1,8 +1,0 @@
-{
-	"SourceFiles": [
-		"C:\\Dev\\Playground\\Plaground\\Source\\Plaground\\Plaground.Build.cs",
-		"C:\\Dev\\Playground\\Plaground\\Source\\Plaground.Target.cs",
-		"C:\\Dev\\Playground\\Plaground\\Source\\PlagroundEditor.Target.cs"
-	],
-	"EngineVersion": "5.6.1"
-}
