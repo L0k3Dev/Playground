@@ -29,18 +29,18 @@ void ABaseCharacter::BeginPlay()
 	InitializeStats(_statsTable, _rowName);
 	InitializeAbilities();
 
-	UE_LOG(LogTemp, Log, TEXT("Health: %f"), _ASC->GetNumericAttribute(UBaseAttributeSet::GetHealthAttribute()));
-	UE_LOG(LogTemp, Log, TEXT("Attack: %f"), _ASC->GetNumericAttribute(UBaseAttributeSet::GetDamageAttribute()));
+	UE_LOG(LogTemp, Log, TEXT("[ABaseCharacter::BeginPlay] - Health: %f"), _ASC->GetNumericAttribute(UBaseAttributeSet::GetHealthAttribute()));
+	UE_LOG(LogTemp, Log, TEXT("[ABaseCharacter::BeginPlay] - Attack: %f"), _ASC->GetNumericAttribute(UBaseAttributeSet::GetDamageAttribute()));
 
-	if (_baseTag.IsValid())
-	{
-		FGameplayEventData Payload;
-		Payload.EventTag = _baseTag;
-		Payload.Instigator = this;
-		Payload.Target = this;
-
-		UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(this, _baseTag, Payload);
-	}
+//Método temporal, es para poder comprobar que funcione bien
+	FTimerHandle TimerHandle;
+	GetWorldTimerManager().SetTimer(
+		TimerHandle,
+		this,
+		&ABaseCharacter::SendInitialPushEvent,
+		0.5f,   // delay en segundos
+		false
+	);
 }
 
 void ABaseCharacter::InitializeStats(UDataTable* DataTable, FName RowName)
@@ -50,33 +50,44 @@ void ABaseCharacter::InitializeStats(UDataTable* DataTable, FName RowName)
 		static const FString ContextString(TEXT("Character Attribute Context"));
 		FDT_BaseAttributes* Attributes = DataTable->FindRow<FDT_BaseAttributes>(RowName, ContextString);
 
-		_ASC->InitStats(UBaseAttributeSet::StaticClass(), nullptr);
+		if (Attributes)
+		{
+			_ASC->InitStats(UBaseAttributeSet::StaticClass(), nullptr);
 
-		_ASC->SetNumericAttributeBase(UBaseAttributeSet::GetHealthAttribute(), Attributes->Health);
-		_ASC->SetNumericAttributeBase(UBaseAttributeSet::GetMaxHealthAttribute(), Attributes->MaxHealth);
-		_ASC->SetNumericAttributeBase(UBaseAttributeSet::GetDamageAttribute(), Attributes->Damage);
-		_ASC->SetNumericAttributeBase(UBaseAttributeSet::GetArmorAttribute(), Attributes->Armor);
+			_ASC->SetNumericAttributeBase(UBaseAttributeSet::GetHealthAttribute(), Attributes->Health);
+			_ASC->SetNumericAttributeBase(UBaseAttributeSet::GetMaxHealthAttribute(), Attributes->MaxHealth);
+			_ASC->SetNumericAttributeBase(UBaseAttributeSet::GetDamageAttribute(), Attributes->Damage);
+			_ASC->SetNumericAttributeBase(UBaseAttributeSet::GetArmorAttribute(), Attributes->Armor);
 		
-		_ASC->SetNumericAttributeBase(UBaseAttributeSet::GetMaxSpeedAttribute(), Attributes->MaxSpeed);
-		_ASC->SetNumericAttributeBase(UBaseAttributeSet::GetAccelerationAttribute(), Attributes->Acceleration);
-		_ASC->SetNumericAttributeBase(UBaseAttributeSet::GetDeaccelerationAttribute(), Attributes->Deacceleration);
-		_ASC->SetNumericAttributeBase(UBaseAttributeSet::GetTurnRateZAttribute(), Attributes->TurnRateZ);
-
+			_ASC->SetNumericAttributeBase(UBaseAttributeSet::GetMaxSpeedAttribute(), Attributes->MaxSpeed);
+			_ASC->SetNumericAttributeBase(UBaseAttributeSet::GetAccelerationAttribute(), Attributes->Acceleration);
+			_ASC->SetNumericAttributeBase(UBaseAttributeSet::GetDeaccelerationAttribute(), Attributes->Deacceleration);
+			_ASC->SetNumericAttributeBase(UBaseAttributeSet::GetTurnRateZAttribute(), Attributes->TurnRateZ);
 		
-		UE_LOG(LogTemp, Warning, TEXT("Attributes Loaded!"));
+			UE_LOG(LogTemp, Warning, TEXT("[ABaseCharacter::InitializeStats] - Attributes Loaded!"));
+		}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("[ABaseCharacter::InitializeStats] - Row not found or RowName is invalid!"));
+		}
 	}
 	else
 	{
-		UE_LOG(LogTemp, Error, TEXT("DataTable not found or RowName is invalid!"));
+		UE_LOG(LogTemp, Error, TEXT("[ABaseCharacter::InitializeStats] - DataTable is null!"));
 	}
 }
 
 void ABaseCharacter::InitializeAbilities()
 {
 	_ASC-> InitAbilityActorInfo(this, this);
-	if (_baseAbility)
+	if (_knockbackAbility)
 	{
-		_ASC->GiveAbility(FGameplayAbilitySpec(_baseAbility, 1, 0));
+		_ASC->GiveAbility(FGameplayAbilitySpec(_knockbackAbility, 1, 0));
+		_ASC->GiveAbility(FGameplayAbilitySpec(_receiveKnockbackAbility, 1, 0));
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("[ABaseCharacter::InitializeAbilities] - Ability not receive it!"));
 	}
 }
 
@@ -92,5 +103,18 @@ void ABaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+}
+
+void ABaseCharacter::SendInitialPushEvent()
+{
+	if (_knockbackTag.IsValid())
+	{
+		FGameplayEventData Payload;
+		Payload.EventTag = _knockbackTag;
+		Payload.Instigator = this;
+		Payload.Target = Target;
+		
+		UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(this, _knockbackTag, Payload);
+	}
 }
 

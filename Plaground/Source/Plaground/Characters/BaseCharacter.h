@@ -17,6 +17,9 @@ class PLAGROUND_API ABaseCharacter : public ACharacter
 {
 	GENERATED_BODY()
 public:
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Target")
+	AActor* Target;
+	
 protected:
 	UPROPERTY(VisibleAnywhere, Category = "Settings|GAS", meta = (AllowPrivateAccess = "true"))
 	UAbilitySystemComponent* _ASC;
@@ -30,10 +33,17 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Settings|GAS|Data", meta = (AllowPrivateAccess = "true"))
 	FName _rowName = "BaseStats";
 
+#pragma region Abilities
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Settings|GAS|Abilities", meta = (AllowPrivateAccess = "true"))
-	TSubclassOf<UGameplayAbility> _baseAbility;
+	TSubclassOf<UGameplayAbility> _knockbackAbility;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Settings|GAS|Abilities|Events", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<UGameplayAbility> _receiveKnockbackAbility;
+
+#pragma endregion
 	
-	const FGameplayTag _baseTag = FGameplayTag::RequestGameplayTag("Abilities.Characters.Basic");
+	const FGameplayTag _knockbackTag = FGameplayTag::RequestGameplayTag("Ability.Knockback");
+	const FGameplayTag _receiveKnockbackTag = FGameplayTag::RequestGameplayTag("Ability.ReceiveKnockback");
 	
 public:	
 	// Sets default values for this character's properties
@@ -51,4 +61,7 @@ protected:
 
 	void InitializeStats(UDataTable* DataTable, FName RowName);
 	void InitializeAbilities();
+
+private:
+	void SendInitialPushEvent();
 };
