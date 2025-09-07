@@ -70,7 +70,6 @@ void UGA_Knockback::ActivateAbility(const FGameplayAbilitySpecHandle Handle, con
 	FGameplayEventData EventData;
 	EventData.OptionalObject = _knockbackPayload;
 	EventData.TargetData = TDH;
-	EventData.EventMagnitude = _defaultStrength;
 	EventData.Instigator = OwnerCharacter;
 
 	const FGameplayTag KnockbackTag = FGameplayTag::RequestGameplayTag(FName("Event.Knockback.Apply"));
