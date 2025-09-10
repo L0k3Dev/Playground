@@ -23,8 +23,15 @@ private:
 public:
 	UGA_ReceiveKnockback();
 
-	virtual void ActivateAbilityFromEvent(const FGameplayEventData& EventData);
+	//virtual void ActivateAbilityFromEvent(const FGameplayEventData& EventData);
 
+    virtual void ActivateAbility(
+    		const FGameplayAbilitySpecHandle Handle,
+    		const FGameplayAbilityActorInfo* ActorInfo,
+    		const FGameplayAbilityActivationInfo ActivationInfo,
+    		const FGameplayEventData* TriggerEventData
+    		) override;
+    		
 	virtual void EndAbility(
 		const FGameplayAbilitySpecHandle SpecHandle,
 		const FGameplayAbilityActorInfo* Info,

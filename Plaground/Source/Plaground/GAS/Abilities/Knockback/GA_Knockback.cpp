@@ -11,16 +11,7 @@
 UGA_Knockback::UGA_Knockback(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer),
 _defaultStrength(1200.f), _defaultDuration(0.1f)
 {
-	AbilityTags.AddTag(FGameplayTag::RequestGameplayTag(FName("Ability.Knockback")));
-
-	FAbilityTriggerData TriggerData;
-	TriggerData.TriggerSource = EGameplayAbilityTriggerSource::GameplayEvent;
-	TriggerData.TriggerTag = FGameplayTag::RequestGameplayTag(FName("Event.Knockback.Request"));
-	AbilityTriggers.Add(TriggerData);
-
-	InstancingPolicy = EGameplayAbilityInstancingPolicy::InstancedPerActor;
-
-	//NetExecutionPolicy = EGameplayAbilityNetExecutionPolicy::ServerOnly;
+	//NetExecutionPolicy = EGameplayAbilityNetExecutionPolicy::ServerOnly;*/
 }
 
 void UGA_Knockback::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo,
@@ -61,22 +52,24 @@ void UGA_Knockback::ActivateAbility(const FGameplayAbilitySpecHandle Handle, con
 	{
 		Direction = (OwnerCharacter->Target->GetActorLocation() - OwnerCharacter->GetActorLocation()).GetSafeNormal();
 	}
-	
+		
 	_knockbackPayload->KnockbackData.Direction = Direction.GetSafeNormal();
 	_knockbackPayload->KnockbackData.Strength = _defaultStrength;
 	_knockbackPayload->KnockbackData.Duration = _defaultDuration;
 	_knockbackPayload->KnockbackData.HitResult = Hit;
 	
+	const FGameplayTag KnockbackTag = FGameplayTag::RequestGameplayTag(FName("Event.Knockback.Apply"));
+	
 	FGameplayEventData EventData;
+	EventData.EventTag = KnockbackTag;
 	EventData.OptionalObject = _knockbackPayload;
 	EventData.TargetData = TDH;
 	EventData.Instigator = OwnerCharacter;
 
-	const FGameplayTag KnockbackTag = FGameplayTag::RequestGameplayTag(FName("Event.Knockback.Apply"));
 	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(OwnerCharacter->Target, KnockbackTag, EventData);
 	
-	UE_LOG(LogTemp, Log, TEXT("[GA_Knockback::ActivateAbility] - Sent knockback to %s | Strength= %.1f",
-		*OwnerCharacter->Target->GetName(), _defaultStrength));
+	UE_LOG(LogTemp, Error, TEXT("[GA_Knockback::ActivateAbility] - Sent knockback to %s | Strength= %f"),
+	*OwnerCharacter->Target->GetName(), _defaultStrength);
 	
 	EndAbility(Handle, ActorInfo, ActivationInfo, false, false);
 }

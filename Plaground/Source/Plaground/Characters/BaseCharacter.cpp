@@ -33,14 +33,17 @@ void ABaseCharacter::BeginPlay()
 	UE_LOG(LogTemp, Log, TEXT("[ABaseCharacter::BeginPlay] - Attack: %f"), _ASC->GetNumericAttribute(UBaseAttributeSet::GetDamageAttribute()));
 
 //Método temporal, es para poder comprobar que funcione bien
-	FTimerHandle TimerHandle;
-	GetWorldTimerManager().SetTimer(
-		TimerHandle,
-		this,
-		&ABaseCharacter::SendInitialPushEvent,
-		0.5f,   // delay en segundos
-		false
-	);
+	if (Target != nullptr)
+	{
+		FTimerHandle TimerHandle;
+		GetWorldTimerManager().SetTimer(
+			TimerHandle,
+			this,
+			&ABaseCharacter::SendInitialPushEvent,
+			1.5f,   // delay en segundos
+			false
+		);
+	}
 }
 
 void ABaseCharacter::InitializeStats(UDataTable* DataTable, FName RowName)
@@ -83,11 +86,19 @@ void ABaseCharacter::InitializeAbilities()
 	if (_knockbackAbility)
 	{
 		_ASC->GiveAbility(FGameplayAbilitySpec(_knockbackAbility, 1, 0));
+	}
+	else
+	{
+		UE_LOGFMT(LogTemp, Error, "[ABaseCharacter::InitializeAbilities] - {} - Knockback ability not receive it!", GetName());
+	}
+
+	if (_receiveKnockbackAbility)
+	{
 		_ASC->GiveAbility(FGameplayAbilitySpec(_receiveKnockbackAbility, 1, 0));
 	}
 	else
 	{
-		UE_LOG(LogTemp, Error, TEXT("[ABaseCharacter::InitializeAbilities] - Ability not receive it!"));
+		UE_LOGFMT(LogTemp, Error, "[ABaseCharacter::InitializeAbilities] - {} - _receive Knockback ability not receive it!", GetName());
 	}
 }
 
@@ -115,6 +126,10 @@ void ABaseCharacter::SendInitialPushEvent()
 		Payload.Target = Target;
 		
 		UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(this, _knockbackTag, Payload);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("[ABaseCharacter::SendInitialPushEvent] - _knockbackTag not valid!"));
 	}
 }
 

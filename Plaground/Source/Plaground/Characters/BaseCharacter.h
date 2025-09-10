@@ -17,7 +17,7 @@ class PLAGROUND_API ABaseCharacter : public ACharacter
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Target")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Target")
 	AActor* Target;
 	
 protected:
@@ -42,8 +42,8 @@ protected:
 
 #pragma endregion
 	
-	const FGameplayTag _knockbackTag = FGameplayTag::RequestGameplayTag("Ability.Knockback");
-	const FGameplayTag _receiveKnockbackTag = FGameplayTag::RequestGameplayTag("Ability.ReceiveKnockback");
+	const FGameplayTag _knockbackTag = FGameplayTag::RequestGameplayTag("Event.Knockback.Request");
+	const FGameplayTag _receiveKnockbackTag = FGameplayTag::RequestGameplayTag("Event.Knockback.Apply");
 	
 public:	
 	// Sets default values for this character's properties
